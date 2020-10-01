@@ -15,14 +15,53 @@
 
   <section|Indistinguishable particules in "first quantization">
 
+  <with-opacity|50%|<with|color|red|<em|First lecture video
+  <hlink|here|https://icfp.xif.fr/?path=/advanced-quantum-mechanics/>. Will
+  probably stay unredacted. Symmetrization postulate, bosonic and fermionic
+  subspaces. Exemples : origin of magnetism and non-interacting bosons
+  bunching. Tutorials explore a major consequence : interference effects for
+  two identical bosons/fermions <math|\<rightarrow\>> boson bunching and
+  Pauli exclusion.>>>
+
   <section|The framework of "second quantization">
 
   <subsection|The Fock space and creation/anihilation operators>
 
-  <with|color|red|[ a word on the density matrix in second quantization
-  <math|\<leftarrow\>> cours MC ]>
+  <subsubsection|A realization of creation/anihilation operators using first
+  quantization formalism>
 
-  <subsubsection|Change of basis in Fock space>
+  <subsubsection|Properties, Change of basis in Fock space>
+
+  \;
+
+  \;
+
+  At first glance, we'd expect that the expectation value
+  <math|<around*|\<langle\>|\<Psi\><around*|\||\<b-a\>|\|>\<Psi\>|\<rangle\>>>
+  of a creation/anihilation operator <math|\<b-a\>> is always zero. Indeed,
+  if <math|<around*|\||\<Psi\>|\<rangle\>>> is a <math|N>-particules state,
+  then
+
+  <\equation*>
+    <around*|<left|\<langle\>|1>|\<Psi\><around*|<left|\||1>|\<b-a\>|<right|\||1>>\<Psi\>|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em><around*|<left|\<langle\>|1>|N<text|
+    part><around*|<left|\||1>|\<b-a\>|<right|\||1>>N<text|
+    part>|<right|\<rangle\>|1>><separating-space|0.2em>\<propto\><separating-space|0.2em><around*|\<langle\>|N<text|
+    part><mid|\|>N-1<text| part>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em>0
+  </equation*>
+
+  However, if <math|<around*|\||\<Psi\>|\<rangle\>>> is a
+  mixed-number-of-particules state (i.e.<nbsp>a combination of <math|N> and
+  <math|<with|math-condensed|true|N+1>> particules states), then it is
+  totally possible that <math|<around*|\<langle\>|\<Psi\><around*|\||\<b-a\>|\|>\<Psi\>|\<rangle\>>\<neq\>0>.
+  Indeed, anihilation and creation operators have non-zero matrix elements
+  only <em|between> sectors of fixed number of particules. In statistical
+  mechanics terms, we'll see that this is possible only in a non-fixed
+  <math|N> ensemble (e.g.<nbsp>grand canonical), and not in the canonical
+  ensemble.
+
+  \;
+
+  \;
 
   <page-break*><subsubsection|Field operators>
 
@@ -125,13 +164,13 @@
     \<mathe\><rsup|-\<mathi\>*<wide|p|\<vect\>>\<cdot\><wide|r|\<vect\>>/\<hbar\>>*\<b-Psi\><around*|(|<wide|r|\<vect\>>|)><label|ak-field-op-rel>
   </equation>
 
-  <subsection|Single-body operators>
+  <subsection|One-body operators>
 
-  \;
+  <subsubsection|Translating from first quantization to second quantization>
 
-  \;
+  <with|color|red|[ todo ]>
 
-  <subsubsection|Momentum operator>
+  <subsubsection|Momentum operator and kinetic energy>
 
   By definition, the plane-wave basis <math|<around*|(|<around*|\||<wide|p|\<vect\>>|\<rangle\>>|)><rsub|<wide|p|\<vect\>>>>
   is the eigenbasis of the momentum operator <math|<wide|\<b-p\>|\<vect\>>>,
@@ -155,14 +194,14 @@
     Using the Fourier relations (<reference|ak-field-op-rel>),
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|<wide|\<b-P\>|\<vect\>>>|<cell|=>|<cell|<big|sum><rsub|<wide|k|\<vect\>>>\<hbar\>*<wide|k|\<vect\>>*<around*|(|<big|int><tfrac|\<mathd\><rsup|3><wide|r|\<vect\>>|<sqrt|L<rsup|3>>>
-      \<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>>>*\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>|)>*<around*|(|<big|int><tfrac|\<mathd\><rsup|3><wide|r|\<vect\>><rprime|'>|<sqrt|L<rsup|3>>>
+      <tformat|<table|<row|<cell|<wide|\<b-P\>|\<vect\>>>|<cell|=>|<cell|<big|sum><rsub|<wide|k|\<vect\>>>\<hbar\>*<wide|k|\<vect\>>*<around*|(|<big|int><rsub|L<rsup|3>><tfrac|\<mathd\><rsup|3><wide|r|\<vect\>>|<sqrt|L<rsup|3>>>
+      \<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>>>*\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>|)>*<around*|(|<big|int><rsub|L<rsup|3>><tfrac|\<mathd\><rsup|3><wide|r|\<vect\>><rprime|'>|<sqrt|L<rsup|3>>>
       \<mathe\><rsup|-\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>><rprime|'>>*\<b-Psi\><around*|(|<wide|r|\<vect\>><rprime|'>|)>|)>>>|<row|<cell|>|<cell|=>|<cell|\<hbar\><big|int>\<mathd\><rsup|3><wide|r|\<vect\>><big|int>\<mathd\><rsup|3><wide|r|\<vect\>><rprime|'>
       \<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*\<b-Psi\><around*|(|<wide|r|\<vect\>><rprime|'>|)>*<tfrac|1|L<rsup|3>><big|sum><rsub|<wide|k|\<vect\>>><wide|k|\<vect\>>*\<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><around*|(|<wide|r|\<vect\>>-<wide|r|\<vect\>><rprime|'>|)>>>>>>
     </eqnarray*>
 
     At the limit <math|L\<rightarrow\>\<infty\>>, the (ill-defined) sum
-    becomes a Riemann integral :
+    becomes a Riemann integral (in <name|1d> to simplify) :
 
     <\equation*>
       <tfrac|1|L>*<big|sum><rsub|k\<in\><frac|2\<pi\>|L>\<bbb-Z\>>k*\<mathe\><rsup|\<mathi\>*k\<cdot\><around*|(|x-x<rprime|'>|)>><separating-space|0.2em><long-arrow|\<rubber-rightarrow\>||<stack|<tformat|<table|<row|<cell|L\<rightarrow\>\<infty\>>>|<row|<cell|\<Delta\>k=<frac*|2\<pi\>|L>>>>>>><separating-space|0.2em><tfrac|1|L>*<big|int><rsub|-\<infty\>><rsup|\<infty\>><frac|\<mathd\>k|<frac*|2\<pi\>|L>>*k*\<mathe\><rsup|\<mathi\>*k\<cdot\><around*|(|x-x<rprime|'>|)>><separating-space|0.2em>=<separating-space|0.2em><tfrac|-1|2\<pi\>\<mathi\>><big|int><rsub|-\<infty\>><rsup|\<infty\>>\<mathd\>k*\<partial\><rsub|x<rprime|'>>*\<mathe\><rsup|\<mathi\>*k\<cdot\><around*|(|x-x<rprime|'>|)>>
@@ -170,8 +209,8 @@
 
     \;
 
-    (which could be written as a derivative <math|\<delta\><rprime|'>> of the
-    Dirac delta) so that, under the assumption that the field vanishes
+    (which could be written as a mighty derivative <math|\<delta\><rprime|'>>
+    of the Dirac delta) so that, under the assumption that the field vanishes
     quickly enough for the integration-by-parts-bracket to vanish,
 
     <\eqnarray*>
@@ -187,7 +226,8 @@
       \<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><around*|(|<wide|r|\<vect\>>-<wide|r|\<vect\>><rprime|'>|)>>|\<wide-underbrace\>><rsub|=\<delta\><rsup|<around*|(|3|)>><around*|(|<wide|r|\<vect\>>-<wide|r|\<vect\>><rprime|'>|)>>>>>>
     </eqnarray*>
 
-    which finally gives
+    which finally gives (note that this is still valid in the box
+    <math|L<rsup|3>> rather than <math|\<bbb-R\><rsup|3>>) :
   </small>
 
   <\equation>
@@ -196,14 +236,26 @@
     \<b-Psi\><around*|(|<wide|r|\<vect\>>|)>>>>>>
   </equation>
 
+  The kinetic energy operator for a single particle is
+  <math|<dfrac|<wide|\<b-p\>|\<vect\>><rsup|2>|2m>>, which is diagonal in the
+  <math|<around*|(|<around*|\||<wide|p|\<vect\>>|\<rangle\>>|)><rsub|<wide|p|\<vect\>>>>
+  basis, thus the total kinetic energy operator acting in Fock space is
+
+  <\equation*>
+    \<b-K\><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|<wide|p|\<vect\>>><frac|<wide|p|\<vect\>><rsup|2>|2m>*\<b-a\><rsub|<wide|p|\<vect\>>><rsup|\<dag\>>*\<b-a\><rsub|<wide|p|\<vect\>>><above|=|<text|
+    similar >><big|int>\<mathd\><rsup|3><wide|r|\<vect\>>
+    <frac|\<hbar\><rsup|2>|2m><around*|<left|(|1>|<wide|\<nabla\>|\<vect\>>\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>|<right|)|1>>\<cdot\><around*|<left|(|1>|<wide|\<nabla\>|\<vect\>>\<b-Psi\><around*|(|<wide|r|\<vect\>>|)>|<right|)|1>><separating-space|0.2em><below|<above|=|<text|
+    int.<nbsp>by >>|<text|parts>><separating-space|0.2em><big|int>\<mathd\><rsup|3><wide|r|\<vect\>>
+    \<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*<frac|\<hbar\><rsup|2>|2m>\<nabla\><rsup|2>
+    \<b-Psi\><around*|(|<wide|r|\<vect\>>|)>
+  </equation*>
+
   <subsubsection|Translation operator>
 
-  Let's check that <math|<wide|\<b-P\>|\<vect\>>> is indeed the generator of
-  translations (<math|\<b-up-T\><rsub|<wide|a|\<vect\>>>=\<mathe\><rsup|-\<mathi\>*<wide|\<b-P\>|\<vect\>>\<cdot\><wide|a|\<vect\>>/\<hbar\>>>),
-  which are defined by
+  The translation operator acting in the co space is defined by
 
   <\equation>
-    <block|<tformat|<cwith|1|1|1|1|cell-lsep|5pt>|<cwith|1|1|1|1|cell-rsep|5pt>|<cwith|1|1|1|1|cell-bsep|5pt>|<cwith|1|1|1|1|cell-tsep|5pt>|<table|<row|<cell|\<b-up-T\><rsub|<wide|a|\<vect\>>>*\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*\<b-up-T\><rsub|<wide|a|\<vect\>>><rsup|-1>=\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>+<wide|a|\<vect\>>|)>>>>>><label|translation-operator>
+    <block|<tformat|<cwith|1|1|1|1|cell-lsep|5pt>|<cwith|1|1|1|1|cell-rsep|5pt>|<cwith|1|1|1|1|cell-bsep|5pt>|<cwith|1|1|1|1|cell-tsep|5pt>|<table|<row|<cell|\<forall\><wide|r|\<vect\>>,<space|1em>\<b-up-T\><rsub|<wide|a|\<vect\>>>*\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*\<b-up-T\><rsub|<wide|a|\<vect\>>><rsup|-1>=\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>+<wide|a|\<vect\>>|)><space|1em><text|and><space|1em>\<b-up-T\><rsub|<wide|a|\<vect\>>>*<around*|\||0|\<rangle\>>=<around*|\||0|\<rangle\>>>>>>><label|translation-operator>
   </equation>
 
   This relation can by understood as such : \Ptranslating by
@@ -212,9 +264,48 @@
   particule in <math|<wide|r|\<vect\>>+<wide|a|\<vect\>>> from the original
   position\Q.
 
-  \;
+  Let's check that <math|<wide|\<b-P\>|\<vect\>>> is indeed the generator of
+  translations, that is <math|\<b-up-T\><rsub|<wide|a|\<vect\>>>=\<mathe\><rsup|-\<mathi\>*<wide|\<b-P\>|\<vect\>>\<cdot\><wide|a|\<vect\>>/\<hbar\>>>.
+
+  <with|color|red|[ todo ]>
+
+  <subsubsection|Local operators>
+
+  If the single-particule operator <math|\<b-b\>> is only a fuction of
+  <math|<wide|\<b-r\>|\<vect\>>>, i.e. <math|><math|\<b-b\>=f<around*|(|<wide|\<b-r\>|\<vect\>>|)>>,
+  then it is diagonal in the position basis
+  (<math|\<b-b\>=<big|int>\<mathd\><wide|r|\<vect\>>
+  f<around*|(|<wide|r|\<vect\>>|)>*<around*|\||<wide|r|\<vect\>>|\<rangle\>><around*|\<langle\>|<wide|r|\<vect\>>|\|>>)
+  and the associated one-body operator acting in Fock space can be written
+
+  <\equation*>
+    \<b-B\><separating-space|0.2em>=<separating-space|0.2em><big|int>\<mathd\><wide|r|\<vect\>>
+    f<around*|(|<wide|r|\<vect\>>|)>*\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*\<b-Psi\><around*|(|<wide|r|\<vect\>>|)>
+  </equation*>
+
+  The simplest example is the <strong|density operator>
+  <math|\<b-n\><around*|(|<wide|r|\<vect\>>|)>> (where
+  <math|\<b-b\>=\<delta\><around*|(|<wide|\<b-r\>|\<vect\>>|)>>) :
+
+  <\equation*>
+    \<b-n\><around*|(|<wide|r|\<vect\>>|)><separating-space|0.2em>\<assign\><separating-space|0.2em>\<b-Psi\><rsup|\<dag\>><around*|(|<wide|r|\<vect\>>|)>*\<b-Psi\><around*|(|<wide|r|\<vect\>>|)>
+  </equation*>
+
+  It as the important property that, on a domain <math|\<cal-D\>> of space,
+  <math|\<b-N\><rsub|\<cal-D\>>\<assign\><big|int><rsub|\<cal-D\>>\<mathd\><wide|r|\<vect\>>
+  \<b-n\><around*|(|<wide|r|\<vect\>>|)>> has an <em|integer spectrum>, and
+  thus can be interpreted as the number of particules in the domain.
+
+  An another important example is that of an <strong|external potential>,
+  which can be expressed in second quantization an a one-body operator.
+
+  <subsubsection|Non-interacting particules>
+
+  <with|color|red|[ todo ]>
 
   <subsection|Two-body operators>
+
+  <with|color|red|[ todo ]>
 
   <\equation*>
     \<b-C\><rsup|<around*|(|N|)>><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|i\<less\>j>\<b-c\><rsub|i,j>
@@ -226,6 +317,8 @@
   </equation*>
 
   <subsection|Evolution of quantum fields>
+
+  <with|color|red|[ todo ]>
 
   \;
 
@@ -248,7 +341,9 @@
     </itemize-dot>
   </with>
 
-  <subsection|Classical vs. quantum fields>
+  <subsection|Quantization of a classical field>
+
+  <with|color|red|[ todo ]>
 
   <new-page*><section|Correlations and quantum coherence>
 
@@ -376,42 +471,90 @@
     We'll call <math|\<b-rho\><rsup|<around*|(|1|)>>> the <strong|one-body
     density matrix>.
 
-    <\compact>
-      It can be defined through any other basis
-      <math|<around*|(|<around*|\||i|\<rangle\>>|)><rsub|i>>, with
-      creation/anihilation operators <math|\<b-a\><rsup|\<dag\>><rsub|i>>,
-      <math|\<b-a\><rsub|i>> by<\footnote>
-        Refer to the <em|Condensed Matter Theory> course by Benoît Douçot for
-        more details in the case of fermions. It is shown that when
-        <math|\<b-rho\>> satisfies Wick's theorem and is \Pnot condensed\Q
-        (<math|<around*|\<langle\>|\<b-a\><rsub|i>*\<b-a\><rsub|j>|\<rangle\>>=<around*|\<langle\>|\<b-a\><rsub|i><rsup|\<dag\>>*<smash|\<b-a\><rsub|j><rsup|\<dag\>>>|\<rangle\>>=0>)
-        then <math|\<b-rho\>> is fully determined by
-        <math|\<b-rho\><rsup|<around*|(|1|)>>> as a thermal distribution with
-        an effective hamiltonian : the occupation probability of a given
-        state is the Fermi-Dirac distribution.
-      </footnote>
+    It can be defined through any other basis
+    <math|<around*|(|<around*|\||\<alpha\>|\<rangle\>>|)><rsub|\<alpha\>>>,
+    with creation/anihilation operators <math|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>>,
+    <math|\<b-a\><rsub|\<alpha\>>> by<\footnote>
+      Refer to the <em|Condensed Matter Theory> course by Benoît Douçot for
+      more details in the case of fermions. It is shown that when
+      <math|\<b-rho\>> satisfies Wick's theorem and is \Pnot condensed\Q
+      (<math|<around*|\<langle\>|\<b-a\><rsub|i>*\<b-a\><rsub|j>|\<rangle\>>=<around*|\<langle\>|\<b-a\><rsub|i><rsup|\<dag\>>*<smash|\<b-a\><rsub|j><rsup|\<dag\>>>|\<rangle\>>=0>)
+      then <math|\<b-rho\>> is fully determined by
+      <math|\<b-rho\><rsup|<around*|(|1|)>>> as a thermal distribution with
+      an effective hamiltonian : the occupation probability of a given state
+      is the Fermi-Dirac distribution.
+    </footnote>
 
-      <\equation>
-        <around*|<left|\<langle\>|1>|i<around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>j|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em>\<b-rho\><rsup|<around*|(|1|)>><rsub|i
-        j><separating-space|0.2em>=<separating-space|0.2em><around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j>|<right|\<rangle\>|1>><rsub|\<b-rho\>><separating-space|0.2em>=<separating-space|0.2em>tr<rsub|\<cal-F\>><around*|<left|(|1>|\<b-rho\>*\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j>|<right|)|1>>
-      </equation>
+    <\equation>
+      <around*|<left|\<langle\>|1>|\<alpha\><around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>\<alpha\><rprime|'>|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em>\<b-rho\><rsup|<around*|(|1|)>><rsub|\<alpha\>
+      \<alpha\><rprime|'>><separating-space|0.2em>=<separating-space|0.2em><around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|\<rangle\>|1>><rsub|\<b-rho\>><separating-space|0.2em>=<separating-space|0.2em>tr<rsub|\<cal-F\>><around*|<left|(|1>|\<b-rho\>*\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|)|1>>
+    </equation>
 
-      The expectation value of a one-body operator <math|\<b-B\>> can be
-      written with the one-body density matrix
+    For a pure state, <math|\<b-rho\>=<around*|\||\<Psi\>|\<rangle\>><around*|\<langle\>|\<Psi\>|\|>>
+    and we have <math|\<b-rho\><rsup|<around*|(|1|)>><rsub|\<alpha\>
+    \<alpha\><rprime|'>>=tr<rsub|\<cal-F\>><around*|<left|(|1>|<around*|\||\<Psi\>|\<rangle\>><around*|\<langle\>|\<Psi\>|\|>*\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|)|1>>=<around*|<left|\<langle\>|1>|\<Psi\><around*|<left|\||1>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|\||1>>\<Psi\>|<right|\<rangle\>|1>>>.
 
-      <\equation>
-        <block|<tformat|<cwith|1|1|1|1|cell-lsep|5pt>|<cwith|1|1|1|1|cell-rsep|5pt>|<cwith|1|1|1|1|cell-bsep|5pt>|<cwith|1|1|1|1|cell-tsep|5pt>|<table|<row|<cell|<around*|\<langle\>|\<b-B\>|\<rangle\>><rsub|\<b-rho\>><separating-space|0.2em>=<separating-space|0.2em>tr<around*|(|\<b-rho\>*\<b-B\>*|)><separating-space|0.2em>=<separating-space|0.2em>tr<rsub|\<cal-H\><rsup|<around*|(|1|)>>><around*|<left|(|1>|\<b-rho\><rsup|<around*|(|1|)>>*\<b-b\>|<right|)|1>>>>>>>
-      </equation>
+    The expectation value of a one-body operator <math|\<b-B\>> can be
+    written with the one-body density matrix
 
-      In general, however, the one-body density matrix does not contain
-      enough information to compute the expectation of two-body operators,
-      such as interaction terms. It is thus of limited use. We see that, in
-      the basis <math|<around*|(|<around*|\||i|\<rangle\>>|)><rsub|i>>,
-      <math|\<b-rho\><rsup|<around*|(|1|)>><rsub|i
-      i>=<around*|\<langle\>|\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|i>|\<rangle\>><rsub|\<b-rho\>>>
-      gives us the <strong|population in the state>
-      <math|<around*|\||i|\<rangle\>>>.
-    </compact>
+    <\equation>
+      <block|<tformat|<cwith|1|1|1|1|cell-lsep|5pt>|<cwith|1|1|1|1|cell-rsep|5pt>|<cwith|1|1|1|1|cell-bsep|5pt>|<cwith|1|1|1|1|cell-tsep|5pt>|<table|<row|<cell|<around*|\<langle\>|\<b-B\>|\<rangle\>><rsub|\<b-rho\>><separating-space|0.2em>=<separating-space|0.2em>tr<around*|(|\<b-rho\>*\<b-B\>*|)><separating-space|0.2em>=<separating-space|0.2em>tr<rsub|\<cal-H\><rsup|<around*|(|1|)>>><around*|<left|(|1>|\<b-rho\><rsup|<around*|(|1|)>>*\<b-b\>|<right|)|1>>>>>>>
+    </equation>
+
+    In general, however, the one-body density matrix does not contain enough
+    information to compute the expectation of two-body operators, such as
+    interaction terms. It is thus of limited use. We see that the diagonal
+    terms <math|\<b-rho\><rsup|<around*|(|1|)>><rsub|\<alpha\>
+    \<alpha\>>=<around*|\<langle\>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\>>|\<rangle\>><rsub|\<b-rho\>>=<around*|\<langle\>|\<b-n\><rsub|\<alpha\>>|\<rangle\>><rsub|\<b-rho\>>>
+    gives the <strong|population in the state>
+    <math|<around*|\||\<alpha\>|\<rangle\>>>.
+
+    <item>A bit more generally, let's take a <math|N>-particles state
+    <math|<around*|\||\<cal-S\>|\<rangle\>>=<around*|\||\<alpha\><rsub|1>:n<rsub|1>,\<ldots\>,\<alpha\><rsub|k>:n<rsub|k>|\<rangle\>>>
+    (which is a Slater determinant for fermions), where
+    <math|<big|sum><rsub|i>n<rsub|i>=N>, and compute its one-body density
+    matrix <math|\<rho\><rsup|<around*|(|1|)>>> :
+
+    <\equation*>
+      \<rho\><rsub|\<alpha\> \<alpha\><rprime|'>><rsup|<around*|(|1|)>><separating-space|0.2em>=<separating-space|0.2em><around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|\<rangle\>|1>><rsub|<around*|\||\<cal-S\>|\<rangle\>><around*|\<langle\>|\<cal-S\>|\|>><separating-space|0.2em>=<separating-space|0.2em><around*|<left|\<langle\>|1>|\<cal-S\><around*|<left|\||1>|<with|color|dark
+      red|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>>*<with|color|dark
+      blue|\<b-a\><rsub|\<alpha\><rprime|'>>>|<right|\||1>>\<cal-S\>|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em><wide*|<around*|<left|(|1>|<with|color|dark
+      red|\<b-a\><rsub|\<alpha\>>><around*|\||\<alpha\><rsub|1>:n<rsub|1>,\<ldots\>,\<alpha\><rsub|k>:n<rsub|k>|\<rangle\>>|<right|)|1>><rsup|\<dag\>>|\<wide-underbrace\>><rsub|=<separating-space|0.2em>0<text|
+      if >\<alpha\>\<nin\><around*|{|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|k>|}>>*<wide*|<around*|<left|(|1>|<with|color|dark
+      blue|\<b-a\><rsub|\<alpha\><rprime|'>>><around*|\||\<alpha\><rsub|1>:n<rsub|1>,\<ldots\>,\<alpha\><rsub|k>:n<rsub|k>|\<rangle\>>|<right|)|1>>|\<wide-underbrace\>><rsub|=<separating-space|0.2em>0<text|
+      if >\<alpha\><rprime|'>\<nin\><around*|{|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|k>|}>>
+    </equation*>
+
+    In the case where <math|<with|color|dark
+    red|\<alpha\>=\<alpha\><rsub|i>>,<with|color|dark
+    blue|\<alpha\><rprime|'>=\<alpha\><rsub|j>>\<in\><around*|{|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|k>|}>>,
+    by applying destruction operators, we get
+
+    <\equation*>
+      \<rho\><rsub|\<alpha\> \<alpha\><rprime|'>><rsup|<around*|(|1|)>><separating-space|0.2em>=<separating-space|0.2em><sqrt|n<rsub|i>>*<around*|<left|\<langle\>|1>|\<alpha\><rsub|1>:n<rsub|1>,\<ldots\>,<with|color|dark
+      red|\<alpha\><rsub|i> :<with|math-condensed|true|n<rsub|i>-1>>,\<ldots\>,\<alpha\><rsub|k>:n<rsub|k>|<right|\||1>>*<sqrt|n<rsub|j>>*<around*|<left|\||1>|\<alpha\><rsub|1>:n<rsub|1>,\<ldots\>,<with|color|dark
+      blue|\<alpha\><rsub|j> :<with|math-condensed|true|n<rsub|j>-1>>,\<ldots\>,\<alpha\><rsub|k>:n<rsub|k>|<right|\<rangle\>|1>>
+    </equation*>
+
+    and it is clear that, by orthonormality of the Fock basis, it is
+    <em|zero> if <math|i\<neq\>j>, and <em|one> if <math|i=j> :
+
+    <\equation>
+      \<rho\><rsub|\<alpha\> \<alpha\><rprime|'>><rsup|<around*|(|1|)>><separating-space|0.2em>=<separating-space|0.2em>\<delta\><rsub|\<alpha\>
+      \<alpha\><rprime|'>>*\<delta\><rsub|\<alpha\>\<in\><around*|{|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|k>|}>>*n<rsub|i<rsub|\<alpha\>>><space|1em><text|so><space|1em><block|<tformat|<cwith|1|1|1|1|cell-lsep|5pt>|<cwith|1|1|1|1|cell-rsep|5pt>|<cwith|1|1|1|1|cell-bsep|5pt>|<cwith|1|1|1|1|cell-tsep|5pt>|<table|<row|<cell|\<b-rho\><rsup|<around*|(|1|)>><rsub|<around*|\||\<cal-S\>|\<rangle\>>>=<rigid|<big|sum>><rsub|i>
+      n<rsub|i>*<around*|\||\<alpha\><rsub|i>|\<rangle\>><around*|\<langle\>|\<alpha\><rsub|i>|\|>>>>>><label|1b-dens-matrix-det>
+    </equation>
+
+    We recover, in this particular case, that
+    <math|tr<rsub|\<cal-H\><rsup|<around*|(|1|)>>><around*|(|\<b-rho\><rsup|<around*|(|1|)>>|)>=<big|sum><rsub|i>n<rsub|i>=N>.
+
+    Back to the one-body correlation function, if we denote the
+    wave-functions of basis states <math|<around*|\||\<alpha\>|\<rangle\>>>
+    <math|\<psi\><rsub|\<alpha\>><around*|(|<wide|r|\<vect\>>|)>\<assign\><around*|\<langle\>|r<mid|\|>\<alpha\>|\<rangle\>>>,\ 
+
+    <\equation>
+      g<rsup|<around*|(|1|)>><rsub|<around*|\||\<cal-S\>|\<rangle\>>><around*|(|<wide|r|\<vect\>>,<wide|r|\<vect\>><rprime|'>|)><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|i=1><rsup|k><around*|\<langle\>|<wide|r|\<vect\>><mid|\|>\<alpha\><rsub|i>|\<rangle\>><around*|\<langle\>|\<alpha\><rsub|i><mid|\|><wide|r|\<vect\>><rprime|'>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|i=1><rsup|k>\<psi\><rsub|\<alpha\>><around*|(|<wide|r|\<vect\>>|)>\<psi\><rsub|\<alpha\>><rsup|\<ast\>><around*|(|<wide|r|\<vect\>><rprime|'>|)><label|1st-order-corr-func-det>
+    </equation>
 
     <item>In the special case of an uniform system,
     <math|g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>><rprime|''>,<wide|r|\<vect\>><rprime|'>|)>>
@@ -513,27 +656,30 @@
   in the same state <math|<around*|\||\<varphi\>|\<rangle\>>> :
 
   <\equation*>
-    <around*|\||\<Psi\>|\<rangle\>>=<around*|\||N:\<varphi\>|\<rangle\>>=<around*|(|\<b-a\><rsup|\<dag\>><rsub|\<varphi\>>|)><rsup|N><around*|\||0|\<rangle\>>
+    <around*|\||\<Psi\>|\<rangle\>>=<around*|\||N:\<varphi\>|\<rangle\>>=<around*|(|\<b-a\><rsup|\<dag\>><rsub|\<varphi\>>|)><rsup|N><around*|\||\<emptyset\>|\<rangle\>>
   </equation*>
 
-  The one-body density matrix is then
+  By using (<reference|1b-dens-matrix-det>)<\footnote>
+    Let's give a boiled-down proof of (<reference|1b-dens-matrix-det>) using
+    <math|<around*|<left|\<langle\>|1>|\<alpha\><around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>\<alpha\><rprime|'>|<right|\<rangle\>|1>>=<around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|\<rangle\>|1>>>
+    by taking any basis containing <math|<around*|\||\<varphi\>|\<rangle\>>>
+    :
+
+    <math|><math|\<b-rho\><rsup|<around*|(|1|)>><rsub|\<alpha\>
+    \<alpha\><rprime|'>>=<around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|\<rangle\>|1>><rsub|\<b-rho\>=<around*|\||\<Psi\>|\<rangle\>><around*|\<langle\>|\<Psi\>|\|>>=tr<around*|<left|(|1>|<around*|\||N:\<varphi\>|\<rangle\>><around*|\<langle\>|N:\<varphi\>|\|>*\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>>|<right|)|1>>=<around*|\<langle\>|N:\<varphi\>|\|>\<b-a\><rsup|\<dag\>><rsub|\<alpha\>>*\<b-a\><rsub|\<alpha\><rprime|'>><around*|\||N:\<varphi\>|\<rangle\>>>,
+    which is clearly zero for <math|\<alpha\>\<neq\>\<varphi\>> (destroying a
+    non-occupated mode <math|\<alpha\>>), and
+    <math|<around*|<left|\<langle\>|1>|\<varphi\><around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>\<varphi\>|<right|\<rangle\>|1>>=<around*|\<langle\>|N:\<varphi\>|\|>\<b-n\><rsub|\<varphi\>><around*|\||N:\<varphi\>|\<rangle\>>=N>.
+    Thus, <math|\<b-rho\><rsup|<around*|(|1|)>>=<big|sum><rsub|\<alpha\>,\<alpha\><rprime|'>>\<b-rho\><rsup|<around*|(|1|)>><rsub|\<alpha\>
+    \<alpha\><rprime|'>>*<around*|\||\<alpha\>|\<rangle\>><around*|\<langle\>|\<alpha\><rprime|'>|\|>=N<around*|\||\<varphi\>|\<rangle\>><around*|\<langle\>|\<varphi\>|\|>>.
+  </footnote>, the one-body density matrix is then
 
   <\equation*>
     \<b-rho\><rsup|<around*|(|1|)>>=N<around*|\||\<varphi\>|\<rangle\>><around*|\<langle\>|\<varphi\>|\|>
   </equation*>
 
-  This can be seen<\footnote>
-    Let's give a proof using the fact that
-    <math|<around*|<left|\<langle\>|1>|i<around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>j|<right|\<rangle\>|1>>=<around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j>|<right|\<rangle\>|1>><rsub|\<b-rho\>>>
-    by taking any basis where <math|><math|<around*|\||i=0|\<rangle\>>=<around*|\||\<varphi\>|\<rangle\>>>
-    :
-
-    <math|><math|<around*|<left|\<langle\>|1>|i<around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>j|<right|\<rangle\>|1>>=<around*|<left|\<langle\>|1>|\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j>|<right|\<rangle\>|1>><rsub|\<b-rho\>=<around*|\||\<Psi\>|\<rangle\>><around*|\<langle\>|\<Psi\>|\|>>=tr<around*|(|<around*|\||N:\<varphi\>|\<rangle\>><around*|\<langle\>|N:\<varphi\>|\|>*\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j>|)>=<around*|\<langle\>|N:\<varphi\>|\|>\<b-a\><rsup|\<dag\>><rsub|i>*\<b-a\><rsub|j><around*|\||N:\<varphi\>|\<rangle\>>>,
-    which is clearly zero for <math|j\<neq\>0> (destroying a non-occupated
-    mode <math|j>), and <math|<around*|<left|\<langle\>|1>|\<varphi\><around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>\<varphi\>|<right|\<rangle\>|1>>=<around*|\<langle\>|N:\<varphi\>|\|>\<b-n\><rsub|\<varphi\>><around*|\||N:\<varphi\>|\<rangle\>>=N>.
-    Thus, <math|\<b-rho\><rsup|<around*|(|1|)>>=<big|sum><rsub|i,j><around*|<left|\<langle\>|1>|i<around*|<left|\||1>|\<b-rho\><rsup|<around*|(|1|)>>|<right|\||1>>j|<right|\<rangle\>|1>><around*|\||i|\<rangle\>><around*|\<langle\>|j|\|>=N<around*|\||\<varphi\>|\<rangle\>><around*|\<langle\>|\<varphi\>|\|>>.
-  </footnote> looking as the expectation value of a one-body operator
-  <math|\<b-B\>> :
+  This can also be seen looking as the expectation value of a one-body
+  operator <math|\<b-B\>> :
 
   <\equation*>
     <around*|<left|\<langle\>|1>|\<b-B\>|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|i><around*|<left|\<langle\>|1>|\<b-b\><rsub|i>|<right|\<rangle\>|1>><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|i><around*|\<langle\>|\<varphi\><around*|\||\<b-b\>|\|>\<varphi\>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em>N*<around*|\<langle\>|\<varphi\><around*|\||\<b-b\>|\|>\<varphi\>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em>tr<around*|<left|(|1>|N*<around*|\||\<varphi\>|\<rangle\>><around*|\<langle\>|\<varphi\>|\|>*\<b-b\>|<right|)|1>><separating-space|0.2em>=<separating-space|0.2em>tr<around*|<left|(|1>|\<b-rho\><rsup|<around*|(|1|)>>*\<b-b\>|<right|)|1>>
@@ -547,15 +693,71 @@
     g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>><rprime|'>,<wide|r|\<vect\>>|)>=<around*|\<langle\>|<wide|r|\<vect\>><around*|\||\<b-rho\><rsup|<around*|(|1|)>>|\|><wide|r|\<vect\>><rprime|'>|\<rangle\>>=N*\<varphi\><around*|(|<wide|r|\<vect\>><rprime|'>|)>*\<varphi\><around*|(|<wide|r|\<vect\>>|)><rsup|\<ast\>><space|1em><text|and><space|1em>g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>,<wide|r|\<vect\>>|)>=n<around*|(|r|)>=N*<around*|\||\<varphi\><around*|(|<wide|r|\<vect\>>|)>|\|><rsup|2>
   </equation*>
 
-  <page-break*>In general, we are between a thermal and a fully coherent
-  state. If we begin with a coherent state, it thermalizes and the evolution
-  of the correlation function looks like this :
+  In general, we are between a thermal and a fully coherent state. If we
+  begin with a coherent state, it thermalizes and the evolution of the
+  correlation function looks like this :
 
   <\padded-center>
     <image|<tuple|<#255044462D312E340A25B5EDAEFB0A342030206F626A0A3C3C202F4C656E6774682035203020520A2020202F46696C746572202F466C6174654465636F64650A3E3E0A73747265616D0A789CAD9C39AFE54872857DFE8A6B0BA82BE6C6C5952340808C91CCC118C2156A04A1CA18C9D0DF579C13919927F96A9686348DE97E272E93CC3572F9184CAFDDFEF996EC5F29DFEF3B9FD775BE3E3FB73F6D3B7FFAAF3FBEFEFEDFF6D71FFF7B4BFB3B1DD72BA577DDF3EBE76BEADC2EA85CA852CBA2F6945F9FA1F7F791D3F6B207B513AA26FBBB1D47FCFD31555A0B75BDCF56F1776B10FEAC7258F64CE1995BFC76BEEB79E2A6F57E1DEF76C79F9F577DEF670D65492D2BA9BC773CCEC5F1CE17AEDB425FEF7A5DAFFC3E9A5D72BFCFFBB45B6464C2C5E7D52CB7B9CBC34AD390EA2CD5C455ED46D7BBE562179A3CF91BE40F9335D557B6FCEE9709ABEB57B68A2CF2F7D1986C6F94C7796CF6B47CA5572EBC57B6620CF131D9D2D1657A9F67A1B0BCBE53E1DF564EABF9F7B5DF1B64B54AC8767BBB537E5F5799A2DE99370C99CAE9C9908F332513792F2136BB727F9F35F71F7726B11EC13F6EABBF0FFE2CEFDB7E7B5FD619727D973321FFD64A21ACCE9B55DBD5F5E99758D55BDE4F6BEB0BF7CF174AFA1FDBF9CE68B4E37D5B25FDB4DF53B65C9DEF56D26C84FDEE353B1AA1591D5C90B7557EB5D4967D6BBBB2275325D72E3EAFF2CE9622A4558F65C692A17F87B02CD483B544690FBAEA66C99AB5A1752AF48AFA4ED57292D1ACE87BA725408F2DD932725A0DA25BDB15916317E8CBFB796D5D5FEF62E5B09B64F9BBB49B178644573171148863A7C8FC251AE84B8D7DDFECCFFD4023FDE418B80EB4F7CD9BDB7FDABBD8B00F71BECF8383D6650C56B42D925A5EB657DC2DD970E095561D6797268AF5AEA728B5FA95A173C170397CE0B9C478DC4FA8FDE6C5A8513E9463B0B08F60CCDF43455EB7AEAD254E4B8111812E803B5AA7DBE955FCE9F6389323673BDB7588846137B2B9F792EDAF517FA85DA9CCEF9B7575E69A43F0E76BC8625937C18A7191BD4B507C387EAC58A8E406CF508A3DDA147BE571DFFEF7672A74BC1FB892E394D2EEB15F798AFBC085D68F367F00B45518CAF243F475DE432574834C87EB7FF38997E58972B38453C3317A16EE2EAD54FB5EA1DA4585CEE2E283F2D3DD525BE9AC65D33152367AF3501FD176F71FF00CA7A77519F5EA99EA2ACA32144A8A167A348AB5D2C52E8626CB17FB9739A9D31CC3257FA0F991912ED135205AF13E8394E8FE565B9917DE3617A2450FF33AC5F27237EB81A74D4D21FA500A89CC67A4BA50CE8281BCE1A6C9DAD73ABB3BCF78608C89C80B143CFC503E9CA6B6E96593A48D99A5338C316A12A3397EF309CC9E09DF8FDCC119667A3373CDC5A6A39B559FCF97093800EB8596F710A35C2E7D562CC9A7AB37E62556F716E3452AFFFB56779B080A5A1B83FBE76B6AF383AA2C2FA6DAC519E46021CAF9BE38F35CCD6ACE5442916CBEB029ABABCA677D86B696B319D2D46D6D7670A960B73D6E380B4C60E63CE2A1E5ED8FF4BF8B35D81419B71C3231A368C5C28798B00AD942F1C2668EC665C174849504E636CB474EF0B1D533797000DF9CA14AB37196C2E16F438E02856E9E094B594FCC52C75179DB8B833AA10FE191F7E5B3F0D673C3F15522AF5D7D7A41E6AF51FFB8DFD2563EB33C9BCF1AD4A7F0583D598356CEA2A6E1354C2574FD1BDE6C0A9FFBA6BEE0FD4CA279E05FAC68A62E0C3A5776B1F790FEAB75BA9DBE12BECFD481A9E2861FDB78ED71D5FE546BF523F5E59E29AC1B508D3BFA94692E72AC40E686EAE9EB9F820ADC20B3AD7530FBDD18F1A6E1BD7DAA85E2D232F1611515C01530C77145CB70C8D7D36E74732110B37CDB9995B1066858298D35414B7444A64EEB37A6724AA136BFB8155E6C9506B597BB2F8DA7BAD967BACE5C4BF5C7C642014FBD532FCC074F823B08DD321792486AF36957BEFAFF0C1D2B7A24CD3996DAF198B10ABF985197566557AD512D50355DBD02CDF3F4FAF6011A0D17291BD73FE3AEDEEBE237EBE8755489A9D36A0AEE8BCB40D37097C9672A53586363C1900E55D7E9D786C60032656E7713C91BB9E2C50DCD367E8D9549284CDBA97071CCFC62E2C254685B0053AD9EBDC151B47CCDEE60FA4CA37B582DECDEDE56D5A178A37A16EFBFFCD99BDC9262C96765858F8A5180555BF6D1FB18ABDFB7E6E3F9607E7EA2EDE06A0FFA847AB35AAD916CA530C4C5D568489B6476762C1B3C1B17A210E88AFCDB7BAB79B8FE0B56F617BBB789F32E58FE96E69D0FA31B6B7FDB1B582DD9CEEDA4C9BA1AB68807EFC39E77EE6778721398800E966A086C0F3E21B18BC21609C990808B8A96396534DF23A12F9BDBF049D51E8DA9BA72626DD8E34058E7D83C9396BDCAB545E4B1705EC1206D5DB0D03E51F0374CAF2315C5E6B78C91CF1F31F25007D6391A170426B0EE8F3C56ECED2E573FA03041436DECB25116FFB357405768D94831046EE602DDE2D109AC57DCDCB9C7DC63DD22B435C5AB5D9C877C51D86C17D6309FF94EBA1DF416950B82C689A0CF8AA6B0EDE85364F3211BBFF936B6B8ABE9C227DD296FEBF643D954EDF7B7BF2FAEEE9B7B0B6CA113F285EDE5CD211962CCA4AE37EE1AE1616D9B94B3AF8813EE8A8900CBCF76CDE7C78A4414BA26D5D66743BD18DD21CA18536B54C0987823FBFD57EBC3798B3DBC65F0F0630178EF0FAA9C6BE18B95DD1BC3DA3995D7DA546CCD47E3D9EECF72D2380F5CFDF4A6158E6A584EEC945A894DE4CD058A6A6F87B06C346154C0C0491707477E07773D944850D99EE3F7CA252493374ADB0E6DCB13CC7425C943F35D5CEEDBC4E61ED6AACCC7192C58E1C3628FB29B5935A6039714CE20D0D85F41DB454C72704198700A5229712E91B0A8E4334E38E88D06F79A30C16DC1C279D95AC3A75173679875ACBEB9890CFDA1E5E44D69C17E798FC934A6DC87F6243EF926FEBD6389620FF4A54AD719FBCE2D2EEF26CEA0230F51AA9B233CE4870FC40954FFFDC0C91C2B3FFB94E6067FA41F1C0D0B3C146FE093E8EE9B722974AC0D514F17BB4CBFE4F0C3921C2B180CD06BD4F4471A27963FDEDE9BDCA1FA4624B47742EFC8FD0A6BD77446B5652EE9D87270AE1B4D9C67732C574CF36004E761D8B9A9F6FB4F83F79F8C79665B0C8D9ED0B527C13A4DAFC0029BBAF933B8DF4317BCDB16A5E0A1290FFAB28FA4AB4A8FAABE62951E658BE174C8153824B9B6D13CAEFD8EE58CA1E1961C6735CDFF9B736C04FB602BFDC0E03F7EE1277072E4A7ACC9FC0D8EF37EB22FA0C029D6CAD615E096A0E96687F61DE8A75B369A4A8DF15128B980327DA3FCA1BDBF7267D0AF40F7DB5D73ABEB1D9A3A9F9180B59D620F7CC449748A15FB917D3B88525C9E02876CB895995813871FAD411F18E7A2B92F56031D9B699E22C2137371878754BF004B4D1F456CD9144BB103A7BE1775BE3D9B193BF154FBA9DBC165EB46134E516649625F75F82AB76B2FBBB7D0BCA2A67E834D757FC630B067223D9E84C3019C679ABE6BD262A083E268AC9B7EC474508785A3AFFC5A7BED89C1FAD1B6DC011D2B1E32B49FB43D3BDFF70013FFF28F2FEC83764C52FF63B67FB2FFFFE7F6FB3F98757FFDFB565FFFFCFAD32BF152FFF7E7E7964FEEEA130E9DAD06AD276389B45FC3F2E3F5AFAFDF6DB6306DD6B192DDF7AFDF220C38FC48F7BC41BDED7F76836C19FB733789343FB1D680132BEEEDFC1E7F3551D9E93B1E8990E09BA761AA9ED16FBDA83FE9237084F82D959B9EEB37A5B5B9D0161D8FB44C62EBC1827594B58C8D939670BCE82DF3A52CE68BB944A93EF2462D86969B0240E5BDADE8490C70A390029F443A7D0AC3D6B75079AF02A0A01441414F0895F7A2180AF2B8B649A26008FEE5BF678151794F8AA36C55AF40EAE6AA661B4CEA3E562A350CBE594BF7A9600A375BD0D496F75DE9141E2E7C0A120EA8B3116A4554304C48B5514F4EA58AA40A86C9AA5E78B8C02A6476E22ACE7966516265851366656AA156A609A01C5B21ED04579B6A675762E08CD49307BFBA0F2158BCBC01616DF382D62956FCE947B114245948212C8BC59B346BFBB0FCC2B3D00F8468413E98164C0BA38141B896341FA6F15EFFD27E3BE8D6D6F116FA03B62FC1B02017C295EE4B19174A20942BE43641D7B880A88BC98575E1F64ABBA08577B136F632A8D6284C3FE1C0B0C1066AFC5E847B8972F21586ADC32FEA89BF280700FB75ED7EDF32FC41509BBC5F9381D9B65C205857FD88BB6BC76050CC0841D8ABDF731CB2C3050D1206355198A838BC77C3368EFA53521A06B9E0B0BCDFCAC3500601622137C9F825482CA73D9818EF2B50AC3FD609476492EC63131964A4EB51D2FD35EB95152FB58C3ABF5638363481183ADFC463583E2E7CEC98800C59699C8C48C5B2AD5C04914D198C0C752690EC98946CA31C9C2C9EF3E064C70ACA0E2565642D1D43F9A3072C63E2FA80656CBFC1BCAC908ACB30D8CFD736811986FB2066E63EF68598E5FD81CCA6814FB70ABF576AD62B3C327F2DD86CCAC1CD1E0D664D0894D6C919789EA333F8486767FDAFDE4586263D830A7CB6797A1B36839F99B79C002DDB267E12B4AE46770E4D86B631E9A468BCF34AD1E2C17D3045AE3A479BD2C6E226D97694A6C93174797A202CCDB4C0341C150D9AB6794E95A7E57C084F839A40ADAB59CC6322B58D7242B5D1146C2A691850E8B6721931909A88C4746E72216BB964EC2337676B94C2D686EC874CC3E0740D72E235DCFCB879F0E7FEB83F9CA77653144EAF6D416C5327CFB435723F4184442DF52344166260B66C6BCAC9D99023056DB910956F81DA3298E7606D53CEF2ED0ADB987AD236DEFCBAB7C1DBF8EC0EDC46BEE264AF677B1CFC45B1F4F71B9421A0DBA3291D67B72775CBB6005F8EF26998DC0D72823751E1F5C2B0397BA316F606B9C0B75C77A56F9082DF200F9C023980F3CB2780CB352981835C101C0CC2E072E5326E6017E885C2C120180E52385CAE650171D007F7AE91F5AA282ED7B6B2381804C69917531A079901CF42FBF5C2E32005C8897422370C8EE4B6F1FC5E96B642393C50A85C26A01C586E486E8DE8C8BA25F63A483EC85C7F58DF91A06A269B433D4E38B7512F786E3484E3B9DEAC3DF5BE00BADE41A971B07D29A3833CCFC9E8A005D2410AA553E924462C3EF02E3A76910BA98341501DE55D37D50BAD43E67DD606AD83125CC7922AAF83E14CF75CEED6A4C86EC88EECC4707378EC02ED62E86C8AEDBE0CF6EFEC37CA6CA027B943279FE86E2A67775D13DE6D4C8A7147460721F88EBDBBF33B3E63003C2825781BFADA60781093E1A1572AC4839E140F6A62BC50DBE058FD6707794C3A481E94A03CF6FEC1F290870B47AE4EF332517F1BEC0D7AE0BC9E5F67761CE602F4A2B6B7F17313A63755BF6F13A8C75A19540F8A6F77F40C5BCF13B007D9C99EF7F173F97B5449978D033552795FE8B79C78EFD957ACF7004629231A0610BE0C8C35105FC691B730BECC371202F2A1F7DC81E1380B9B52CC97EB259C0F6A82BEA96CEEDFE2E2C1FA4461D5309EE2B00F9998B40F591CB86F1B724EE7DDE0C00F8985F8E1DE0BF28B276F63B51439E96BA9297D821603776651E63EBF7B956CB20088C2F40B807A731C8520AB0BFB436308FC8B86DA3AFE7BB4249BFBD9B8DF379B2D1F07FBB02800845600A8DA976661990010060180900B002CF5560008290010F2010069120058F0F2800040EA0500C2B200C0829767040042AF009096090021150016F4F61500C2A400B000DF08002C009D0B0084650180B6D55E80DF537B920E00F1B702C0A907005413E6E8998728555D01201E2800B0B4630580611000382D244CB88102402D740040D493024054AD0240E80500CEC6710018ED3D01203AC40A006747EE575C030016CC132B0084490120B402C045FBFDCF0500422F0090775C00202C0A00A90500423F002072AD009023490020CBBD0040581400A2AA1400861600382D0E00A90500CEC12600F0AB9F30DF012CBB3018580400A22B28009CBA03C0B00C00E8E3630240E815007280080064F75300E81D7A0240680580E8BE0A004B3B1F0010960500C2A000503537F26A8063835E00201FB2004064430120B40240E81500D2A200709624DE77B192AE0070B6D0BC4201A0E8FE8CA60090E9050042AF00901D7405803E1D4CE0C7D1577EADBDF6C44000A87740C78A872C00F06BE7FB3500FC8ACBD0CD175257B066FA6DB0EFCB3DBAE5B7E1BE35118E41EFBF05F87D496693DC6F417EBDC082FC8AA5FD9B909FA60DE4B7A67D223F733B7B6A36AF3AF2FBFD0BE7A0F5CC6DFCF18717C0EC976216BC55BFB0C028F7AF6160DD1F716862804B85141828D2616018060C2CB746A341290C849E30D0B6B70A032117180883C0C0726B645AB997D8B4726B745AB9D30203434F18380CBE03B45A5718889BAD30D02A5061201E2E3010526120B5C240181406424F18A88A301006818178B8C04064768581B0080C44E1260C845218082D30106915068A76182806CE4EF712CC06B9C0C072EFBE0E1D178C90B6F8D34F942978BE8714020359BC0506A2FC0203D10F0406423E60204C0BAE824160A0341FA6F45EFFD27E6D8181E80F020321D770B77B097843090406861418382E701888E40203717B8581D067EB2C9095212C7094A59F9E60D4080B849C2C5094B3C0300C16483D5920E5CA02BF542E6250660457DD251EAEEE1A10D7553F9CEFDA3D0694B0C07ECF0E09A0270B849A2C5094B3C0300C16483D5920E4C202EBBEC4C6A10CC202436E92710D8FAB7B8F8FE37D8505F6C79205F64C060B9CD241CFD0A3A4FB6BD6AB878A689C5C4D6B4CD6D4589E414D1658D31A2B5753521658D33E5960DD9770B9299D05E2DAC9027123618190CA02BB1E2C500C20664312A7D5B42F2C108F561628DA5920F33258604D4BE81CE4C2026BD2E839934BF41CE4C202C5E02CB0A635826E5478647E09A113D959E0B3C1D0843390ABA61E4657538FA31B7FF52E923492AEA6535820D30B0BAC4983E96AD668BAAE4677CEBBB240241516883B2F2CB03FB80FA6B4C4D4890C162816CC81921C4337AD7175D09305D6742F2C9039551658B3C6D6414D16D8D52C66521658B304D8CDA6F0A65A22ECCA33C4AEAC3176650DB22B8F28BB9A4F658190C20287EC074EC3E02C105242EDCABEB2C0FE700FB62B4BB45D7984DB158DB72BBBB2404865812CC46081356BCC1D72A42CD03A9CB2C09A35EE6ECA59BE25F08EA9270BE4CD9505F2D98305F67CF5F0BAF28CBE2B6BF89D1779B0C04753B2AD9FAD8B067F86E0953506AF2C4178E519851786CE02A1350EAF3C03F14A7327DA7F5F43F14A5B59200D3318AFACD178E5198E57D678BC722E2C107A8DC82B6B485E5963F2CA23280FA067B2C05A96B0BC5A1F717930080BAC7589CC835C5920AE171608292C50A4B3C0610816389E1F65A98F003D3C505860AD4B88DE9083050E4B848E558DD2EB0F1B01756589D32BE7C202A11716381A2242F5CA12AB571EC17AA52A0BACE511AF57161608BD04EC3D22F6CA83058AC5BB48511638EE36A3F61E617B656181D06BE45EA9C202A13474AF3C63F74A5B58202A46C3F7CAB1B24031307EAF2C017C3E741616F865B07F67BF51BE032D517C6509E31B2AE2F8CAAD2C1049070B84101658ABC4F2F1198305422D2C107D6DB04088C902D12B9505424F1608355960A8C902FBCFCE029974B040286181ECFD8305220FC2026B4D0B0B841E2CB0E7D7611F87B9B0C0A8ED6DFCACF17D53F5FB6A801F6B65B040286581E8794B90DF8CF2F33E7E2E7FCF30BF222CB0A7EA917ECF50BF675F41EF79C48B0D035860AD1AEE57EB1AEF57EBA12CB0D62A2C104A5960AD1AF3073559E054C102C570EBCF58358CA7380BAC5523FF904561815DCEE9BC1B9C0522B1B040DC3B090AEC0FDEFA62A92E0180227D7E160337667509018C1A1114D8CB322E38260A444E171488B6101418ED3450E0A321BDB5BFC402B6FA8CF181455120B4A240D51193591FB18030080A845C5060AB4B2C20E4B1B78E02211F2890264181ADAEB180D40B0A84654181ADAEB180D02B0AA465A240484581AD7E890584495160AB6B2C60ABCF5840581614D8DA1AFBF7D49EA4A340FCAD2870EA8102D584297AE6214AF58805C4030505B6F688050C83A0C069216BC20D14056AA10305A29E1405A26A1505422F2870368EAFB8A2BD37B9C333167076E47EC58C056CF54B2C204C8A02A115052EDAEFBFC602422F2890775C50202C8A02A90505423F502072AD289023495020CBBDA040581405A2AA12167CBD795C0B0A9C164781D08A02E7601314F8D54F98EF68CF702C580405A22B280A9CBAA3C0B00C14E8E363A240E815057280080A64F75314E81D7AA2C0D6D65840745F4581AD3D6301615950200C8A0255731FAF0606ADB7472C201FB2A0C0D6D65840684581D02B0AA44551E02C89CF1A28E98A02670BCD2B14058AEECF586201995E5020F48A02D9415714E8D3C1447F1C7DE5D7DA6BAF3E6201F50EE858F19005057EED7CBF46812306F00B6AC249CECAF35AF9AD01805FEFD12DBF89093E12E12E7F4B10E0D764F9B78501F6020B136C9884CB6F4B1A487049FAFF46045B7E4407F6522F44D0C6DF65BD34450DFFA556BFFC931E178FCFBCCE2E2CB6DC50310F621B7AD385D5EC111C78B3C897E519A16AF8904870492C932A9CB97F21B2F0E54F7E54C23780FEB6100292B1C8B796C166C78F58B0DB3B8A8DE8E3E4BA304E24CCBD9E565DB71F41E008B0F9AEBAFAB9E179F7A3397C38C67CFF55D8005CF9627F789D3C77C002B19AC70BC6852FC9F8F9EA5D7DBFC422D8DAF8A2C7A9F80405A6A33DD637B65C464C3E3CCAEEA119B5C5F1E67E720AA987C7F9998FE32202DF9F21A84938A2B75B1E58E8D1BD177E7DB11E47786F3F6E4582CBD76518C7387A3E63018439829F60CAFCA84C0225BF7C3370564744D672991F5E8A3338D338E3ADE735972CBEC93F6FFE82290E55617D25BEFF080A670EAD5A1522001B7CCFB375E1CDEB8B9320A6977A45005C2E5C79D5EBF61311CEED7EE07FC74723B05EE7F772CA9847719200F2052A6B3D6A8F8FE6F45785AAF7B51BB0021F8880C1B2DB102877B83FF2C3908688D3E249B04E68BB750D7EB9B112DDB4FDF46F1E42DFC53F1075BBA3C4C8454FC6D1457689652DCEC9EFD09C0270D07DC4F5199FC0E149E916067C06E7E612A06B7C32A7BF44E72FD363C8FA92B0EBC6C39AD0CC150F4A35C91D0B9FD0F06965C88F607F3A93EB6A7BCD7F36A2B8DD1C9C57E504693EEA74B011867465AE82BBB40161C32CD4677DC5401EBAEF36AC0ECE03E113BF8D477E4BD643B0F0FE361E6A265BCDD9BCFAED3AB9ABFC6126A0747B56BFEA875EB53BF5FB61D3DB2F6EF70F7F67D992927F7D77A2B96B1B29CA8943F851EA7279A044977CE7E0FF58EA72F989AD941A8F39D75283FADE6BA9E7555AEAAFB763A9FF4244F99F7D516638780651157E91AD301EC70FDBF06E1BA36B2AC77F0F6A283CA7C631C7513CE801A7DD980DF8EEFEE51BF99BA7FDFE3AEEE19FAFE2BBDFF83AC3CEAF35618F9E0F0F2C6D7CD39CEF349F8D831FDF8A405EAE44FF9E19286465B72E0F93BFD47CFB16F0DEFD5DF1BB704EB8B92DB5ACDDF1EE983989D3BF467BDF1E9DBB1F18E10531DD60E1E600F87219E2E4015593BF97810F51E2D4D0179498FC4BEA211E078F370A867EF5F57BBC069A3DA21DDE988739F98AB778B1EB02D889D782B825BEDBB35B251CACEDAC4F4CA73F69E04E76E7FD120FA5599FDC9D4DE9335E18B6FE71AC14B1425809A3E4266FFF7456F22FDD448CCAF8DD5FA7466ABCB1C003C3C26FDF1DE98CEBB1FF88EF94F15307CC2DDF51C096F260EBF74FD21687B1EECB7E6CB470DEF3FD6E04D460378B8995C73FFC3CE1BD33AABAFAABD935DE6AE3071031CFFBC13874CEFEE9C3F38EEBE37B717C8B090118989B7C1A4F3C8D1B12975FBE451D175C0E8B0B4F4245C61778BAC1635471B881D29E4E602A239F378E1BFF6E08A22B323F05C7F3F629B91F9BB2E9D55882A003F1D37FDB6C988BCBA7D970587049C36277D47C91C6371F86848FC437BBBBE58C8F077958B34AEB06213F34F0BC6FFEDE25F0249E0E57138FF3EC60458DD2A0A837392EF2D8BC5E2FFFA09D1F1346C5BF36B9A014E9D543EED711D7175F731245A08A539E157BF9C71ED13C85F1F570478985255FC226F9F00F07125586AC5C487DA621F3451CDC16DF98C65829D16DEEAE3EEC55581CF65FFDEC13E71238D4C1F9034644E121BD77494EE9589B9E957D9CAF6C44EAEC6F96CC9BC7F8EFBF47F048F66F88C183A077EE6CA3881AE4071C4F4AF462F4CEBCA83B2E0EED75B0635DB42DBA8E2AF2EBD184F23B080822E270C8133158D517FFE85F955119D898B285DCE78E8195495F64E4655FCCF6DF0B5FB2C8F1FDAF904EB03EA2F125752A0CE34257D63D52F520767E06E7E944BF6F784133A9896F6C4EBF5AE28BB7D10345C6A774DD30FC2A92E739FC0A438AC4AFC2704EBF5A103F3AFD2A645EFC6A58BA5F856CC3AF421DEA574BF55C4FBF0A4B1E7E15AA4CBF0A59D5AF96F8C66DF8D5125FF8ED7E15FA54BF5A02C4845F2DD5B71CD17AA5FAEC385A17865BFC6AA99D4ED3AF8A8CC0866E605F2D640AC3AF165CB6F855588EE95745C2AF8A6C7A75F855DCBD4CBF8A4767F5AB8C689086AD7E28168E4E64F8D56171475922DC4EA5FA55C643E4E5F7267E95F113EA570B0ED9875F2DE41DC3AF22F345FD6A54FCF0AB851F059EBD7A4AF7ABDD107E15F7DBA75F65DD2C7E159663FAD54292349CC690DDAF0E43F608A686ADD7F0ABEC36E257D1AB729BBFC60BCAEE57D1256FF5AB305CE2573146EEE157A176F5AB63FCF7DF4FE799EE57219B7856E8343DAB0D25EE75DDB3AAE2E0989AB5E05FD2DE16AD9E1586323D2BE5F4AC9075F1ACC53FE31D9E958E677A56C85B3D6B61ECEB3D7F67C7E99EB5CBEE59A7462FA59A9EB5FB24F1AC5FDCE8F70DE75C8B89075FD3B3B6F8D841F44191EE59C3303C2B92CB006CA5AC9E1506F1AC0D6FE34CCF0AB97AD6B074CF0A393D6BE3719378D6C69775D4B3C2323D2B9478D6D6B747DDB3B6F8984178D656DAE259A117CFDACAA19EB5B1F30C57DAD08DD5B3C2A09EB5C5FB07E15945764EB48B67456AF1AC0DAFB02C9E1516F1AC2279303265D3ABC3B3E2EEE259F1E8C5B3121049C3D6AC9E556478D66139037165F5AC94EA598997F2F2BB7A56E228F5AC8D5BA1EE591B972FC3B3364EA0E259A3E287676DE556CF2AD23D6B378467C5FDC4B3B26E16CF0A8B78D656937AD621BB671D86EC40785F3C6BF370FCE1FCD0ABA667459713CF8A2EB9785618D4B3628C4CCF0AB578D631FEFBEF593D2BA47A5668F1AC38C59A9E55950F8EA49EB5F95754B645D76B7A5618C4B3524ECF0AB97AD6E65F7109CF4AC7333D2BE4E2591BDF24BAE7EF553D6B97DDB34E4D6705353D6BF749E259BFB8D1EFDBEFB6FF05D75C619A0A656E6473747265616D0A656E646F626A0A352030206F626A0A202020383133330A656E646F626A0A332030206F626A0A3C3C0A2020202F457874475374617465203C3C0A2020202020202F6130203C3C202F43412031202F63612031203E3E0A2020203E3E0A3E3E0A656E646F626A0A322030206F626A0A3C3C202F54797065202F50616765202520310A2020202F506172656E742031203020520A2020202F4D65646961426F78205B20302030203535322E343634373232203132392E393237383837205D0A2020202F436F6E74656E74732034203020520A2020202F47726F7570203C3C0A2020202020202F54797065202F47726F75700A2020202020202F53202F5472616E73706172656E63790A2020202020202F4920747275650A2020202020202F4353202F4465766963655247420A2020203E3E0A2020202F5265736F75726365732033203020520A3E3E0A656E646F626A0A312030206F626A0A3C3C202F54797065202F50616765730A2020202F4B696473205B203220302052205D0A2020202F436F756E7420310A3E3E0A656E646F626A0A362030206F626A0A3C3C202F50726F64756365722028636169726F20312E31372E33202868747470733A2F2F636169726F67726170686963732E6F726729290A2020202F43726561746F72203C46454646303034393030364530303642303037333030363330303631303037303030363530303230303033313030324530303330303032453030333130303230303032383030363830303734303037343030373030303733303033413030324630303246303036393030364530303642303037333030363330303631303037303030363530303245303036463030373230303637303032393E0A2020202F4372656174696F6E446174652028443A32303230303931393032343233372B3032273030290A3E3E0A656E646F626A0A372030206F626A0A3C3C202F54797065202F436174616C6F670A2020202F50616765732031203020520A3E3E0A656E646F626A0A787265660A3020380A303030303030303030302036353533352066200A30303030303038353532203030303030206E200A30303030303038333230203030303030206E200A30303030303038323438203030303030206E200A30303030303030303135203030303030206E200A30303030303038323235203030303030206E200A30303030303038363137203030303030206E200A30303030303038393030203030303030206E200A747261696C65720A3C3C202F53697A6520380A2020202F526F6F742037203020520A2020202F496E666F2036203020520A3E3E0A7374617274787265660A383935320A2525454F460A>|pdf>|0.7par|||>
   </padded-center>
 
-  <subsection|Bose-Einstein condensation and the Penrose/Onsager criterion>
+  <subsubsection|Fermi sphere>
+
+  The free gas one-particle hamiltonian is
+  <math|\<b-h\>=<frac|<wide|\<b-p\>|\<vect\>><rsup|2>|2m>>, for which plane
+  waves <math|<around*|\||<wide|k|\<vect\>>|\<rangle\>>> are eigenstates of
+  eigenvalues <math|<frac|\<hbar\><rsup|2>*k<rsup|2>|2m>>, with
+  <math|<wide|k|\<vect\>>\<in\><frac|2\<pi\>|L>\<bbb-Z\><rsup|d>>. The
+  one-body hamiltonian in second quantization is then
+  <math|\<b-H\>=<big|sum><rsub|<wide|k|\<vect\>>><frac|\<hbar\><rsup|2>*k<rsup|2>|2m>*\<b-a\><rsup|\<dag\>><rsub|<wide|k|\<vect\>>>*\<b-a\><rsub|<wide|k|\<vect\>>>>.
+  The <math|N>-particules fermionic ground state is the Fermi sphere
+
+  <\equation*>
+    <around*|\||\<Psi\><rsub|0>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em><big|prod><rsub|<resize|<around*|\<\|\|\>|<wide|k|\<vect\>>|\<\|\|\>>\<leqslant\>k<rsub|<math-up|F>>|<plus|1l|2ex>||<plus|1r|-2ex>|>>\<b-a\><rsup|\<dag\>><rsub|<wide|k|\<vect\>>>*<around*|\||\<emptyset\>|\<rangle\>>
+  </equation*>
+
+  where <math|k<rsub|<math-up|F>>> is the radius of the Fermi sphere, such
+  that it contains <math|N> vectors of <math|<frac|2\<pi\>|L>\<bbb-Z\><rsup|d>>,
+  that is <math|k<rsub|<math-up|F>><rsup|<around*|(|d=1|)>>=\<pi\>*n> and
+  <math|><math|k<rsub|<math-up|F>><rsup|<around*|(|d=3|)>>=<around*|(|6*\<pi\><rsup|2>*n|)><rsup|<frac*|1|3>>>
+  with <math|n=N/L<rsup|d>> (we assume that our fermions has no internal
+  <name|d.o.f.>).
+
+  Let's compute the first-order correlation function. Using
+  (<reference|1st-order-corr-func-det>),\ 
+
+  <\equation*>
+    g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>,<wide|r|\<vect\>><rprime|'>|)><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|<resize|<around*|\<\|\|\>|<wide|k|\<vect\>>|\<\|\|\>>\<leqslant\>k<rsub|<math-up|F>>|<plus|1l|2ex>||<plus|1r|-2ex>|>><around*|\<langle\>|<wide|r|\<vect\>><mid|\|><wide|k|\<vect\>>|\<rangle\>><around*|\<langle\>|<wide|k|\<vect\>><mid|\|><wide|r|\<vect\>><rprime|'>|\<rangle\>><separating-space|0.2em>=<separating-space|0.2em><big|sum><rsub|<resize|<around*|\<\|\|\>|<wide|k|\<vect\>>|\<\|\|\>>\<leqslant\>k<rsub|<math-up|F>>|<plus|1l|2ex>||<plus|1r|-2ex>|>><tfrac|1|<sqrt|L<rsup|d>>>*\<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>>><tfrac|1|<sqrt|L<rsup|d>>>*\<mathe\><rsup|-\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>><rprime|'>><separating-space|0.2em>=<separating-space|0.2em><tfrac|1|L<rsup|d>><big|sum><rsub|<resize|<around*|\<\|\|\>|<wide|k|\<vect\>>|\<\|\|\>>\<leqslant\>k<rsub|<math-up|F>>|<plus|1l|2ex>||<plus|1r|-2ex>|>>\<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><around*|(|<wide|r|\<vect\>>-<wide|r|\<vect\>><rprime|'>|)>>
+  </equation*>
+
+  In the infinite-size system limit <math|L,N\<rightarrow\>\<infty\>> at
+  fixed <math|n>, the sum (which depends only on
+  <math|<wide|r|\<vect\>>-<wide|r|\<vect\>><rprime|'>>) becomes
+
+  <\equation*>
+    g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>|)><separating-space|0.2em>=<separating-space|0.2em><big|int><rsub|<around*|\<\|\|\>|<wide|k|\<vect\>>|\<\|\|\>>\<leqslant\>k<rsub|<math-up|F>>><frac|\<mathd\><wide|k|\<vect\>>|<around*|(|<frac*|2\<pi\>|<neg|<smash|L>>>|)><rsup|d>>*<tfrac|1|<neg|L><rsup|d>>*\<mathe\><rsup|\<mathi\>*<wide|k|\<vect\>>\<cdot\><wide|r|\<vect\>>><separating-space|0.2em>=<separating-space|0.2em><choice|<tformat|<table|<row|<cell|<with|math-display|true|<big|int><rsub|-k<rsub|<math-up|F>>><rsup|+k<rsub|<math-up|F>>><tfrac|\<mathd\>k|2\<pi\>>*\<mathe\><rsup|\<mathi\>*k*r>=<frac|sin<around*|(|k<rsub|<math-up|F>>*r|)>|2\<pi\>*\<mathi\>*r>=<tfrac|1|2\<pi\>>*sinc<around*|(|k<rsub|<math-up|F>>r|)>>>|<cell|<text|in
+    <name|1d>>>>|<row|<cell|*=<separating-space|0.4em>\<cdots\><separating-space|0.2em>=*>|<cell|<text|in
+    <name|3d>>>>>>>
+  </equation*>
+
+  <\padded-center>
+    <with|color|red|[ figure ]>
+  </padded-center>
+
+  We could have computed this result directly using the Fourier transform
+  relation (<reference|ft-Np-g1>) between <math|N<rsub|<wide|p|\<vect\>>>>
+  (the Fermi sphere here) and <math|g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>|)>>.
+  Contrary to the bosonic case, the fermionic ground state has, even at zero
+  temperature, a <em|finite coherence length> of the order of
+  <math|k<rsub|<math-up|F>><rsup|-1>>. Note that this
+  <math|g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>|)>> is sometimes
+  negative. This is simply a consequence of the Fermi sphere shape, and
+  should not be interpreted as a consequence of Pauli exclusion (we should
+  look at the second-order correlation function for that), as it is totally
+  possible pour bosons too.
+
+  <page-break*><subsection|Bose-Einstein condensation and the Penrose/Onsager
+  criterion>
 
   We'll now use <math|g<rsup|<around*|(|1|)>><around*|(|<wide|r|\<vect\>>|)>>
   to quantify coherence in a general, possibly interacting system, which
@@ -1182,18 +1384,7 @@
 
   <subsection|Bogoliubov theory for fermions>
 
-  <new-page>
-
-  Random notes :
-
-  <math|<around*|<left|\<langle\>|1>|\<Psi\><around*|<left|\||1>|\<b-Psi\><around*|(|<wide|r|\<vect\>>|)>|<right|\||1>>\<Psi\>|<right|\<rangle\>|1>>=0<space|1em><text|because><space|1em><around*|\<langle\>|N<around*|\||\<b-a\>|\|>N|\<rangle\>>\<propto\><around*|\<langle\>|N<mid|\|>N-1|\<rangle\>>=0>
-
-  Si <math|p> est distribué comme <math|p<rsup|2>*\<mathe\><rsup|-p<rsup|2>/4>>,
-  alors <math|g<rsup|<around*|(|1|)>><around*|(|r|)>\<propto\>\<mathe\><rsup|-r<rsup|2>>*<around*|(|2*r<rsup|2>-1|)>>,
-  qui ressemble localement à un sinc
-
-  notation potentiels : <math|V<around*|(|<wide|r|\<vect\>>|)>>,
-  <math|U<around*|(|<wide|r|\<vect\>><rsub|1>,<wide|r|\<vect\>><rsub|2>|)>>
+  <subsection|Bogoliubov theory for bosons>
 </body>
 
 <\initial>
@@ -1207,34 +1398,42 @@
 
 <\references>
   <\collection>
+    <associate|1b-dens-matrix-det|<tuple|10|?>>
+    <associate|1st-order-corr-func-det|<tuple|11|?>>
     <associate|ak-field-op-rel|<tuple|2|2>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.4|4>>
-    <associate|auto-11|<tuple|2.5|4>>
-    <associate|auto-12|<tuple|3|5>>
-    <associate|auto-13|<tuple|3.1|5>>
-    <associate|auto-14|<tuple|3.1.1|5>>
-    <associate|auto-15|<tuple|3.2|6>>
-    <associate|auto-16|<tuple|3.2.1|6>>
-    <associate|auto-17|<tuple|3.2.2|7>>
-    <associate|auto-18|<tuple|3.2.3|7>>
-    <associate|auto-19|<tuple|3.3|8>>
+    <associate|auto-10|<tuple|2.2.3|3>>
+    <associate|auto-11|<tuple|2.2.4|4>>
+    <associate|auto-12|<tuple|2.2.5|4>>
+    <associate|auto-13|<tuple|2.3|4>>
+    <associate|auto-14|<tuple|2.4|4>>
+    <associate|auto-15|<tuple|2.5|4>>
+    <associate|auto-16|<tuple|3|5>>
+    <associate|auto-17|<tuple|3.1|5>>
+    <associate|auto-18|<tuple|3.1.1|5>>
+    <associate|auto-19|<tuple|3.2|6>>
     <associate|auto-2|<tuple|2|1>>
-    <associate|auto-20|<tuple|14|9>>
-    <associate|auto-21|<tuple|3.4|10>>
-    <associate|auto-22|<tuple|3.4.1|10>>
-    <associate|auto-23|<tuple|4|10>>
-    <associate|auto-24|<tuple|4.1|11>>
-    <associate|auto-25|<tuple|4.1.1|11>>
-    <associate|auto-26|<tuple|4.1.2|12>>
-    <associate|auto-27|<tuple|4.2|14>>
+    <associate|auto-20|<tuple|3.2.1|6>>
+    <associate|auto-21|<tuple|3.2.2|7>>
+    <associate|auto-22|<tuple|3.2.3|7>>
+    <associate|auto-23|<tuple|3.2.4|8>>
+    <associate|auto-24|<tuple|3.3|9>>
+    <associate|auto-25|<tuple|16|10>>
+    <associate|auto-26|<tuple|3.4|10>>
+    <associate|auto-27|<tuple|3.4.1|10>>
+    <associate|auto-28|<tuple|4|11>>
+    <associate|auto-29|<tuple|4.1|11>>
     <associate|auto-3|<tuple|2.1|1>>
+    <associate|auto-30|<tuple|4.1.1|12>>
+    <associate|auto-31|<tuple|4.1.2|14>>
+    <associate|auto-32|<tuple|4.2|?>>
+    <associate|auto-33|<tuple|4.3|?>>
     <associate|auto-4|<tuple|2.1.1|1>>
-    <associate|auto-5|<tuple|2.1.2|2>>
-    <associate|auto-6|<tuple|2.2|3>>
-    <associate|auto-7|<tuple|2.2.1|3>>
-    <associate|auto-8|<tuple|2.2.2|3>>
-    <associate|auto-9|<tuple|2.3|3>>
+    <associate|auto-5|<tuple|2.1.2|1>>
+    <associate|auto-6|<tuple|2.1.3|2>>
+    <associate|auto-7|<tuple|2.2|3>>
+    <associate|auto-8|<tuple|2.2.1|3>>
+    <associate|auto-9|<tuple|2.2.2|3>>
     <associate|field-op-ak-rel|<tuple|1|2>>
     <associate|footnote-1|<tuple|1|5>>
     <associate|footnote-10|<tuple|10|11>>
@@ -1258,11 +1457,11 @@
     <associate|footnr-7|<tuple|7|8>>
     <associate|footnr-8|<tuple|8|9>>
     <associate|footnr-9|<tuple|9|9>>
-    <associate|ft-Np-g1|<tuple|10|7>>
-    <associate|quadH-Ldag|<tuple|18|13>>
-    <associate|quadH-evoleq-matrix|<tuple|16|12>>
-    <associate|quadH-opvec-evol|<tuple|17|12>>
-    <associate|thermolim-N-sum-to-integral|<tuple|11|8>>
+    <associate|ft-Np-g1|<tuple|12|7>>
+    <associate|quadH-Ldag|<tuple|20|13>>
+    <associate|quadH-evoleq-matrix|<tuple|18|12>>
+    <associate|quadH-opvec-evol|<tuple|19|12>>
+    <associate|thermolim-N-sum-to-integral|<tuple|13|8>>
     <associate|translation-operator|<tuple|4|3>>
   </collection>
 </references>
@@ -1277,7 +1476,7 @@
         <with|font-family|<quote|rm>|<with|mode|<quote|math>|T=0>>, only a
         small fraction (<with|font-family|<quote|rm>|<with|mode|<quote|math>|7%>>)
         of He atoms are actually condensed.
-      </tuple|<pageref|auto-20>>
+      </tuple|<pageref|auto-24>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1.<space|2spc>Indistinguishable
@@ -1294,99 +1493,117 @@
       creation/anihilation operators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|2tab>|2.1.1.<space|2spc>Change of basis in Fock
-      space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.1.1.<space|2spc>A realization of
+      creation/anihilation operators using first quantization formalism
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|2tab>|2.1.2.<space|2spc>Field operators
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.1.2.<space|2spc>Change of basis in Fock
+      space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.2.<space|2spc>Single-body operators
+      <with|par-left|<quote|2tab>|2.1.3.<space|2spc>Field operators
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|2tab>|2.2.1.<space|2spc>Momentum operator
+      <with|par-left|<quote|1tab>|2.2.<space|2spc>One-body operators
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|2tab>|2.2.2.<space|2spc>Translation operator
+      <with|par-left|<quote|2tab>|2.2.1.<space|2spc>Translating from first
+      quantization to second quantization
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|2.3.<space|2spc>Two-body operators
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.2.2.<space|2spc>Momentum operator and
+      kinetic energy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|2.4.<space|2spc>Evolution of quantum fields
+      <with|par-left|<quote|2tab>|2.2.3.<space|2spc>Translation operator
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|2.5.<space|2spc>Classical vs. quantum
-      fields <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|2.2.4.<space|2spc>Local operators
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|2tab>|2.2.5.<space|2spc>Non-interacting
+      particules <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>>
+
+      <with|par-left|<quote|1tab>|2.3.<space|2spc>Two-body operators
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>>
+
+      <with|par-left|<quote|1tab>|2.4.<space|2spc>Evolution of quantum fields
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|1tab>|2.5.<space|2spc>Quantization of a classical
+      field <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3.<space|2spc>Correlations
       and quantum coherence> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12><vspace|0.5fn>
+      <no-break><pageref|auto-16><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1.<space|2spc>First order correlation
       function / One-body density matrix <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
+      <no-break><pageref|auto-17>>
 
       <with|par-left|<quote|2tab>|3.1.1.<space|2spc>General properties of
       <with|font-family|<quote|rm>|<with|mode|<quote|math>|g<rsup|<around*|(|1|)>>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>>
+      <no-break><pageref|auto-18>>
 
       <with|par-left|<quote|1tab>|3.2.<space|2spc>From fully coherent state
       to thermal cloud <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
+      <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|2tab>|3.2.1.<space|2spc>Momentum distribution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|2tab>|3.2.2.<space|2spc>Thermal cloud
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|2tab>|3.2.3.<space|2spc>Fully coherent state
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|1tab>|3.3.<space|2spc>Bose-Einstein condensation
       and the Penrose/Onsager criterion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-23>>
 
       <with|par-left|<quote|1tab>|3.4.<space|2spc>Measurement of the first
       order correlation function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-25>>
 
       <with|par-left|<quote|2tab>|3.4.1.<space|2spc>Young's slits experiment
       in many body systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-26>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4.<space|2spc>Quadratic
       hamiltonians> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.5fn>
+      <no-break><pageref|auto-27><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1.<space|2spc>General framework
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|2tab>|4.1.1.<space|2spc>Field evolution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|2tab>|4.1.2.<space|2spc>Symmetry properties of
       <with|font-family|<quote|rm>|<with|mode|<quote|math>|\<cal-L\>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|4.2.<space|2spc>Bogoliubov theory for
       fermions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-31>>
     </associate>
   </collection>
 </auxiliary>
